@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hfad.mentalhealth.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_meditateFragment"
+            app:destination="@id/meditateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moodFragment"
+            app:destination="@id/moodFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testsFragment"
+        android:name="com.hfad.mentalhealth.TestsFragment"
+        android:label="Tests"
+        tools:layout="@layout/fragment_tests">
+        <action
+            android:id="@+id/action_testsFragment_to_depressionTest"
+            app:destination="@id/depressionTest" />
+        <action
+            android:id="@+id/action_testsFragment_to_anxietyTest"
+            app:destination="@id/anxietyTest" />
+        <action
+            android:id="@+id/action_testsFragment_to_stressTest"
+            app:destination="@id/stressTest" />
+    </fragment>
+    <fragment
+        android:id="@+id/connectFragment"
+        android:name="com.hfad.mentalhealth.ConnectFragment"
+        android:label="Connect"
+        tools:layout="@layout/fragment_connect">
+        <action
+            android:id="@+id/action_connectFragment_to_doctorDescription"
+            app:destination="@id/doctorDescription" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hfad.mentalhealth.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_securityFragment"
+            app:destination="@id/securityFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_customizationFragment"
+            app:destination="@id/customizationFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_accessibilityFragment"
+            app:destination="@id/accessibilityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meditateFragment"
+        android:name="com.hfad.mentalhealth.MeditateFragment"
+        android:label="Meditate"
+        tools:layout="@layout/fragment_meditate"
+        />
+    <fragment
+        android:id="@+id/moodFragment"
+        android:name="com.hfad.mentalhealth.MoodFragment"
+        android:label="Mood"
+        tools:layout="@layout/fragment_mood"/>
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.hfad.mentalhealth.JournalFragment"
+        android:label="Journal"
+        tools:layout="@layout/fragment_journal"/>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.hfad.mentalhealth.DoctorFragment"
+        android:label="Connect"
+        tools:layout="@layout/fragment_doctor"/>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.hfad.mentalhealth.AccountFragment"
+        android:label="Your Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/securityFragment"
+        android:name="com.hfad.mentalhealth.SecurityFragment"
+        android:label="Security"
+        tools:layout="@layout/fragment_security" />
+    <fragment
+        android:id="@+id/customizationFragment"
+        android:name="com.hfad.mentalhealth.CustomizationFragment"
+        android:label="Customization"
+        tools:layout="@layout/fragment_customization" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.hfad.mentalhealth.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/accessibilityFragment"
+        android:name="com.hfad.mentalhealth.AccessibilityFragment"
+        android:label="Accessibility"
+        tools:layout="@layout/fragment_accessibility" />
+    <fragment
+        android:id="@+id/doctorDescription"
+        android:name="com.hfad.mentalhealth.DoctorDescription"
+        android:label="Doctor Description" >
+            <argument
+                android:name="image"
+                app:argType="integer"/>
+            <argument
+                android:name="name"
+                app:argType="string"/>
+        <argument
+            android:name="description"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/anxietyTest"
+        android:name="com.hfad.mentalhealth.AnxietyTest"
+        android:label="Anxiety Test"
+        tools:layout="@layout/fragment_anxiety_test" >
+        <action
+            android:id="@+id/action_anxietyTest_to_anxietyQuestions"
+            app:destination="@id/anxietyQuestions" />
+    </fragment>
+    <fragment
+        android:id="@+id/depressionTest"
+        android:name="com.hfad.mentalhealth.DepressionTest"
+        android:label="Depression Test"
+        tools:layout="@layout/fragment_depression_test" >
+        <action
+            android:id="@+id/action_depressionTest_to_depressionQuestions"
+            app:destination="@id/depressionQuestions" />
+    </fragment>
+    <fragment
+        android:id="@+id/stressTest"
+        android:name="com.hfad.mentalhealth.StressTest"
+        android:label="Stress Test"
+        tools:layout="@layout/fragment_stress_test" >
+        <action
+            android:id="@+id/action_stressTest_to_stressQuestions"
+            app:destination="@id/stressQuestions" />
+    </fragment>
+    <fragment
+        android:id="@+id/depressionQuestions"
+        android:name="com.hfad.mentalhealth.DepressionQuestions"
+        android:label="Depression Test"
+        tools:layout="@layout/fragment_depression_questions" />
+    <fragment
+        android:id="@+id/anxietyQuestions"
+        android:name="com.hfad.mentalhealth.AnxietyQuestions"
+        android:label="Anxiety Test"
+        tools:layout="@layout/fragment_anxiety_questions" />
+    <fragment
+        android:id="@+id/stressQuestions"
+        android:name="com.hfad.mentalhealth.StressQuestions"
+        android:label="Stress Test"
+        tools:layout="@layout/fragment_stress_questions"/>
+</navigation>

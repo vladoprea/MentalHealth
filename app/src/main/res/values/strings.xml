@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Mental Health</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="meditate">Meditate</string>
+    <string name="check_in">Check in</string>
+    <string name="write">Write</string>
+    <string name="connect">Connect</string>
+    <!-- String used on home page -->
+    <string name="home_page_question">What would you like to do?</string>
+    <!-- String used on settings page -->
+    <string name="title_your_account">Your account</string>
+    <string name="text_your_account">See information about your profile and account including password reset</string>
+    <string name="title_security">Security and Privacy</string>
+    <string name="text_security">Manage your account\'s security and keep track of your app\'s usage</string>
+    <string name="title_check_in">Check-In Customization</string>
+    <string name="text_check_in">Customize the check-in frequently(default is 9am, 3pm, 10pm) </string>
+    <string name="title_notifications">Notifications</string>
+    <string name="text_notifications">Select the kinds of notifications you get about your activities, interests and recommendations</string>
+    <string name="title_accessibility">Accessibility,display and languages</string>
+    <string name="text_accessibility">Manage how Mental Mantra is displayed by you</string>
+    <string name="save_changes">Save Changes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings for test page and specific tests -->
+    <string name="tests_info">The results are informative, NOT a substitute for professional medical advice, diagnosis or treatment.</string>
+    <string name="depression_title">Depression</string>
+    <string name="status_test">Not taken</string>
+    <string name="depression_test_name">Depression (PHQ-9)</string>
+    <string name="depression_time">6 min max</string>
+    <string name="depression_description">The Depression PHQ-9 test is brief, free to use, and easy to score. It has good specificity, but the poor sensitivity could lead to false negatives, which is a problem for a screening tool.</string>
+    <string name="test_introductory">Over the last two weeks, how often have you been bothered by any of the following problems?</string>
+
+    <string name="anxiety_title">Anxiety</string>
+    <string name="anxiety_test_name_homepage">Generalised Anxiety Disorder Assessment</string>
+    <string name="anxiety_test_name">Generalised Anxiety Disorder Assessment (GAD-7)</string>
+    <string name="anxiety_description">The Generalized Anxiety Disorder scale(GAD-7) is one of the most frequently used diagnostic self-report scales for screening, diagnosis and severity assessment…</string>
+    <string name="anxiety_time">5 min max</string>
+
+    <string name="stress_title">Stress</string>
+    <string name="stress_test_name">Stress Questionnaire (DASS-21)</string>
+    <string name="stress_time">4 min max</string>
+    <string name="stress_description">The DASS is a set of three self-report scales designed to measure the negative emotional states of depression, anxiety and stress. The DASS was constructed not merely…</string>
+    <string name="stress_test_introductory">Please read each statement and choose the option that indicates how much the statement applied to you over the past week.\n\nThere are no right or wrong answers.Do not spend too much time on any statement.\n\nThe rating is as follows:\n NEVER - Did not apply to me at all\n SOMETIMES - Applied to me to some degree, or some of the time\nOFTEN - Applied to me to a considerable degree, or a good part of time\nALMOST ALWAYS - Applied to me very much, or most of the time
+    </string>
+
+    <string name="start_test_button">Start Test</string>
+    <string name="next_button">Next</string>
+    <string name="test_end">Thank you for completing the test!</string>
+
+
+</resources>
