@@ -21,32 +21,28 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view  = inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
         val meditateButton = view.findViewById<Button>(R.id.meditation)
 
         meditateButton.setOnClickListener() {
-           view.findNavController().
-                   navigate(R.id.action_homeFragment_to_meditateFragment)
+            view.findNavController().navigate(R.id.action_homeFragment_to_meditateFragment)
         }
 
-        val moodButton =view.findViewById<Button>(R.id.moodentry)
+        val moodButton = view.findViewById<Button>(R.id.moodentry)
 
-        moodButton.setOnClickListener(){
-            view.findNavController().
-            navigate(R.id.action_homeFragment_to_moodFragment)
+        moodButton.setOnClickListener() {
+            view.findNavController().navigate(R.id.action_homeFragment_to_moodFragment)
         }
 
-        val journalButton =view.findViewById<Button>(R.id.journalentry)
+        val journalButton = view.findViewById<Button>(R.id.journalentry)
 
-        journalButton.setOnClickListener(){
-            view.findNavController().
-            navigate(R.id.action_homeFragment_to_journalFragment)
+        journalButton.setOnClickListener() {
+            view.findNavController().navigate(R.id.action_homeFragment_to_journalFragment)
         }
 
-        val doctorButton =view.findViewById<Button>(R.id.connectdoctor)
-        doctorButton.setOnClickListener(){
-            view.findNavController().
-            navigate(R.id.action_homeFragment_to_doctorFragment)
+        val doctorButton = view.findViewById<Button>(R.id.connectdoctor)
+        doctorButton.setOnClickListener() {
+            view.findNavController().navigate(R.id.action_homeFragment_to_doctorFragment)
         }
         return view
     }

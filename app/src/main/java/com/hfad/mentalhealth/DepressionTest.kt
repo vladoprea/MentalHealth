@@ -15,12 +15,11 @@ class DepressionTest : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_depression_test, container, false)
+        val view = inflater.inflate(R.layout.fragment_depression_test, container, false)
 
         val startTest = view.findViewById<Button>(R.id.start_test)
         startTest.setOnClickListener() {
-            view.findNavController().
-            navigate(R.id.action_depressionTest_to_depressionQuestions)
+            view.findNavController().navigate(R.id.action_depressionTest_to_depressionQuestions)
         }
 
         return view

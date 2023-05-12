@@ -10,4 +10,4 @@ data class DoctorList(
     val exp_icon: Int,
     val price_icon: Int,
     val description: String
-    )
+)

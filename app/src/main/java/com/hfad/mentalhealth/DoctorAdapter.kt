@@ -14,26 +14,32 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class DoctorAdapter ( private val doctorList: List<DoctorList>) : RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
+class DoctorAdapter(private val doctorList: List<DoctorList>) :
+    RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_of_doctors, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.list_of_doctors, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = doctorList[position]
-        holder.nameView.text= item.name
-        holder.specializationView.text= item.specialization
-        holder.experienceView.text= item.experience
-        holder.priceView.text= item.price
+        holder.nameView.text = item.name
+        holder.specializationView.text = item.specialization
+        holder.experienceView.text = item.experience
+        holder.priceView.text = item.price
         holder.faceDoctorView.setImageResource(item.face_doctor)
         holder.expIconView.setImageResource(item.exp_icon)
         holder.priceIconView.setImageResource(item.price_icon)
 
 
         holder.itemView.setOnClickListener {
-           val action = ConnectFragmentDirections.actionConnectFragmentToDoctorDescription(item.face_doctor, item.name, item.description)
+            val action = ConnectFragmentDirections.actionConnectFragmentToDoctorDescription(
+                item.face_doctor,
+                item.name,
+                item.description
+            )
             it.findNavController().navigate(action)
         }
     }

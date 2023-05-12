@@ -19,10 +19,20 @@ class DepressionQuestions : Fragment() {
     private lateinit var questionTextView: TextView
     private lateinit var choiceRadioGroup: RadioGroup
     private val questions = listOf(
-        QuestionsAnswersList("Little interest or pleasure in doing things?", listOf("Several days", "Not at all", "More than half the days", "Nearly every day")),
-        QuestionsAnswersList("Feeling down, depressed, or hopeless?", listOf("Several days", "Not at all", "More than half the days", "Nearly every day")),
-        QuestionsAnswersList("Trouble falling or staying asleep, or sleeping too much?", listOf("Several days", "Not at all", "More than half the days", "Nearly every day"))
+        QuestionsAnswersList(
+            "Little interest or pleasure in doing things?",
+            listOf("Several days", "Not at all", "More than half the days", "Nearly every day")
+        ),
+        QuestionsAnswersList(
+            "Feeling down, depressed, or hopeless?",
+            listOf("Several days", "Not at all", "More than half the days", "Nearly every day")
+        ),
+        QuestionsAnswersList(
+            "Trouble falling or staying asleep, or sleeping too much?",
+            listOf("Several days", "Not at all", "More than half the days", "Nearly every day")
+        )
     )
+
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,7 +48,7 @@ class DepressionQuestions : Fragment() {
         Singleton.clearAnswers()
         showQuestion()
 
-        nextButton.setOnClickListener{
+        nextButton.setOnClickListener {
             // Save answer to the question
             val selectedAnswer = choiceRadioGroup.checkedRadioButtonId
             if (selectedAnswer != -1) {

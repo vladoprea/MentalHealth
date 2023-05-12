@@ -22,20 +22,17 @@ class TestsFragment : Fragment() {
 
         val depressionCard = view.findViewById<CardView>(R.id.depression_card_test)
         depressionCard.setOnClickListener() {
-            view.findNavController().
-            navigate(R.id.action_testsFragment_to_depressionTest)
+            view.findNavController().navigate(R.id.action_testsFragment_to_depressionTest)
         }
 
         val anxietyCard = view.findViewById<CardView>(R.id.anxiety_card_test)
         anxietyCard.setOnClickListener() {
-            view.findNavController().
-            navigate(R.id.action_testsFragment_to_anxietyTest)
+            view.findNavController().navigate(R.id.action_testsFragment_to_anxietyTest)
         }
 
         val stressCard = view.findViewById<CardView>(R.id.stress_card_test)
         stressCard.setOnClickListener() {
-            view.findNavController().
-            navigate(R.id.action_testsFragment_to_stressTest)
+            view.findNavController().navigate(R.id.action_testsFragment_to_stressTest)
         }
 
         return view

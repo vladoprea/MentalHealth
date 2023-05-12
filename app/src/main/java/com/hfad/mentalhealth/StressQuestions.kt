@@ -16,17 +16,27 @@ class StressQuestions : Fragment() {
     private lateinit var questionTextView: TextView
     private lateinit var choiceRadioGroup: RadioGroup
     private val questions = listOf(
-        QuestionsAnswersList("I found it hard to wind down", listOf("Never", "Sometimes", "Often", "Almost Always")),
-        QuestionsAnswersList("I tend to over-react to situations", listOf("Never", "Sometimes", "Often", "Almost Always")),
-        QuestionsAnswersList("I felt that I was using a lot of nervous energy", listOf("Never", "Sometimes", "Often", "Almost Always"))
+        QuestionsAnswersList(
+            "I found it hard to wind down",
+            listOf("Never", "Sometimes", "Often", "Almost Always")
+        ),
+        QuestionsAnswersList(
+            "I tend to over-react to situations",
+            listOf("Never", "Sometimes", "Often", "Almost Always")
+        ),
+        QuestionsAnswersList(
+            "I felt that I was using a lot of nervous energy",
+            listOf("Never", "Sometimes", "Often", "Almost Always")
+        )
     )
+
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view =  inflater.inflate(R.layout.fragment_stress_questions, container, false)
+        val view = inflater.inflate(R.layout.fragment_stress_questions, container, false)
 
         questionTextView = view.findViewById(R.id.question_stress)
         choiceRadioGroup = view.findViewById(R.id.stress_radio_group)
@@ -36,7 +46,7 @@ class StressQuestions : Fragment() {
         Singleton.clearAnswers()
         showQuestion()
 
-        nextButton.setOnClickListener{
+        nextButton.setOnClickListener {
             // Save answer to the question
             val selectedAnswer = choiceRadioGroup.checkedRadioButtonId
             if (selectedAnswer != -1) {

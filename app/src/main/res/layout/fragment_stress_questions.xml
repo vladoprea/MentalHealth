@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="70dp"
-    android:layout_marginStart="20dp">
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="70dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
@@ -31,12 +30,13 @@
             android:id="@+id/question_stress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
             android:textColor="#2B2B2B"
             android:textSize="17sp"
             android:textStyle="bold" />
+
         <RadioGroup
             android:id="@+id/stress_radio_group"
             android:layout_width="wrap_content"
@@ -57,16 +57,15 @@
             <RadioButton
                 android:id="@+id/option_three"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
 
             <!-- Option 4 -->
             <RadioButton
                 android:id="@+id/option_four"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
+                android:layout_height="wrap_content" />
         </RadioGroup>
+
         <TextView
             android:id="@+id/test_end"
             android:layout_width="wrap_content"
@@ -86,16 +85,14 @@
         android:id="@+id/next_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/next_button"
-        android:textColor="#ffffff"
-        android:textAllCaps="false"
-        android:textSize="17sp"
         android:layout_marginHorizontal="20dp"
-        android:background="@drawable/test_button_selector"
         android:layout_marginBottom="15dp"
+        android:background="@drawable/test_button_selector"
+        android:text="@string/next_button"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
-    </androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintStart_toStartOf="parent"></androidx.appcompat.widget.AppCompatButton>
 </androidx.constraintlayout.widget.ConstraintLayout>

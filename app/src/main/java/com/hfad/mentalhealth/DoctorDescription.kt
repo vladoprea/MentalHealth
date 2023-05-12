@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.navArgs
 
 class DoctorDescription : Fragment() {
-    private val args : DoctorDescriptionArgs by navArgs()
+    private val args: DoctorDescriptionArgs by navArgs()
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(

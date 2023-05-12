@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,196 +7,198 @@
     android:layout_marginTop="45dp"
     android:background="@drawable/bg_home">
 
-<ScrollView
-    android:id="@+id/scrollView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/home_page_question"
-        android:textColor="#82000000"
-        android:textFontWeight="400"
-        android:textSize="20sp" />
+        android:layout_height="match_parent">
 
-    <FrameLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".HomeFragment">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        tools:context=".MeditateFragment">
+            <!-- TODO: Update blank fragment layout -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="85dp"
+                android:text="@string/home_page_question"
+                android:textColor="#82000000"
+                android:textFontWeight="400"
+                android:textSize="20sp" />
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:context=".MeditateFragment">
 
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="148dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="44dp"
-            android:src="@drawable/meditation_bg" />
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="148dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="44dp"
+                    android:src="@drawable/meditation_bg" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="65dp"
-            android:layout_marginTop="23dp"
-            android:background="#00000000"
-            android:src="@drawable/meditation_picture" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="23dp"
+                    android:background="#00000000"
+                    android:src="@drawable/meditation_picture" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/meditation"
-            android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="90dp"
-            android:background="@drawable/home_buttons_bg"
-            android:text="@string/meditate"
-            android:textAllCaps="false"
-            android:textColor="#ffffff" />
-    </FrameLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/meditation"
+                    android:layout_width="110dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="90dp"
+                    android:background="@drawable/home_buttons_bg"
+                    android:text="@string/meditate"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
+            </FrameLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        tools:context=".MoodFragment">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:context=".MoodFragment">
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="148dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="16dp"
-            android:src="@drawable/mood_bg" />
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="148dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/mood_bg" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="148dp"
-            android:layout_marginTop="16dp"
-            android:background="#00000000"
-            android:src="@drawable/mood_picture" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="148dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#00000000"
+                    android:src="@drawable/mood_picture" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/moodentry"
-            android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="33dp"
-            android:text="@string/check_in"
-            android:textColor="#ffffff"
-            android:textAllCaps="false"
-            android:background="@drawable/home_buttons_bg" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/moodentry"
+                    android:layout_width="110dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="33dp"
+                    android:background="@drawable/home_buttons_bg"
+                    android:text="@string/check_in"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
 
-    </FrameLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        tools:context=".JournalFragment">
+            </FrameLayout>
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="148dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="48dp"
-            android:src="@drawable/journal_bg" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:context=".JournalFragment">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="105dp"
-            android:layout_marginTop="10dp"
-            android:background="#00000000"
-            android:src="@drawable/journal_picture" />
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="148dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="48dp"
+                    android:src="@drawable/journal_bg" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/journalentry"
-            android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="95dp"
-            android:text="@string/write"
-            android:textColor="#ffffff"
-            android:textAllCaps="false"
-            android:background="@drawable/home_buttons_bg" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:src="@drawable/journal_picture" />
 
-    </FrameLayout>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="98dp"
-        tools:context=".DoctorFragment">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/journalentry"
+                    android:layout_width="110dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="95dp"
+                    android:background="@drawable/home_buttons_bg"
+                    android:text="@string/write"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
 
-        <ImageView
-            android:layout_width="350dp"
-            android:layout_height="148dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/meditation_bg" />
+            </FrameLayout>
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="30dp"
-            android:background="#00000000"
-            android:src="@drawable/meditation_picture" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="98dp"
+                tools:context=".DoctorFragment">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="210dp"
-            android:layout_marginTop="30dp"
-            android:background="#00000000"
-            android:src="@drawable/meditation_picture" />
+                <ImageView
+                    android:layout_width="350dp"
+                    android:layout_height="148dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="18dp"
+                    android:src="@drawable/meditation_bg" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/connectdoctor"
-            android:layout_width="110dp"
-            android:layout_height="28dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/home_buttons_bg"
-            android:text="@string/connect"
-            android:textAllCaps="false"
-            android:textColor="#ffffff" />
-    </FrameLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#00000000"
+                    android:src="@drawable/meditation_picture" />
 
-</LinearLayout>
-</ScrollView>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="210dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#00000000"
+                    android:src="@drawable/meditation_picture" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/connectdoctor"
+                    android:layout_width="110dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/home_buttons_bg"
+                    android:text="@string/connect"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

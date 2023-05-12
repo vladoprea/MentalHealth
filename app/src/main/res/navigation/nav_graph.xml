@@ -72,23 +72,22 @@
         android:id="@+id/meditateFragment"
         android:name="com.hfad.mentalhealth.MeditateFragment"
         android:label="Meditate"
-        tools:layout="@layout/fragment_meditate"
-        />
+        tools:layout="@layout/fragment_meditate" />
     <fragment
         android:id="@+id/moodFragment"
         android:name="com.hfad.mentalhealth.MoodFragment"
         android:label="Mood"
-        tools:layout="@layout/fragment_mood"/>
+        tools:layout="@layout/fragment_mood" />
     <fragment
         android:id="@+id/journalFragment"
         android:name="com.hfad.mentalhealth.JournalFragment"
         android:label="Journal"
-        tools:layout="@layout/fragment_journal"/>
+        tools:layout="@layout/fragment_journal" />
     <fragment
         android:id="@+id/doctorFragment"
         android:name="com.hfad.mentalhealth.DoctorFragment"
         android:label="Connect"
-        tools:layout="@layout/fragment_doctor"/>
+        tools:layout="@layout/fragment_doctor" />
     <fragment
         android:id="@+id/accountFragment"
         android:name="com.hfad.mentalhealth.AccountFragment"
@@ -117,22 +116,22 @@
     <fragment
         android:id="@+id/doctorDescription"
         android:name="com.hfad.mentalhealth.DoctorDescription"
-        android:label="Doctor Description" >
-            <argument
-                android:name="image"
-                app:argType="integer"/>
-            <argument
-                android:name="name"
-                app:argType="string"/>
+        android:label="Doctor Description">
+        <argument
+            android:name="image"
+            app:argType="integer" />
+        <argument
+            android:name="name"
+            app:argType="string" />
         <argument
             android:name="description"
-            app:argType="string"/>
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/anxietyTest"
         android:name="com.hfad.mentalhealth.AnxietyTest"
         android:label="Anxiety Test"
-        tools:layout="@layout/fragment_anxiety_test" >
+        tools:layout="@layout/fragment_anxiety_test">
         <action
             android:id="@+id/action_anxietyTest_to_anxietyQuestions"
             app:destination="@id/anxietyQuestions" />
@@ -141,7 +140,7 @@
         android:id="@+id/depressionTest"
         android:name="com.hfad.mentalhealth.DepressionTest"
         android:label="Depression Test"
-        tools:layout="@layout/fragment_depression_test" >
+        tools:layout="@layout/fragment_depression_test">
         <action
             android:id="@+id/action_depressionTest_to_depressionQuestions"
             app:destination="@id/depressionQuestions" />
@@ -150,7 +149,7 @@
         android:id="@+id/stressTest"
         android:name="com.hfad.mentalhealth.StressTest"
         android:label="Stress Test"
-        tools:layout="@layout/fragment_stress_test" >
+        tools:layout="@layout/fragment_stress_test">
         <action
             android:id="@+id/action_stressTest_to_stressQuestions"
             app:destination="@id/stressQuestions" />
@@ -169,5 +168,5 @@
         android:id="@+id/stressQuestions"
         android:name="com.hfad.mentalhealth.StressQuestions"
         android:label="Stress Test"
-        tools:layout="@layout/fragment_stress_questions"/>
+        tools:layout="@layout/fragment_stress_questions" />
 </navigation>

@@ -21,8 +21,7 @@ class AnxietyTest : Fragment() {
 
         val startTest = view.findViewById<Button>(R.id.start_test)
         startTest.setOnClickListener() {
-            view.findNavController().
-            navigate(R.id.action_anxietyTest_to_anxietyQuestions)
+            view.findNavController().navigate(R.id.action_anxietyTest_to_anxietyQuestions)
         }
 
         return view
