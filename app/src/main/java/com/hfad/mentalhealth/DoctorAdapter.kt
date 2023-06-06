@@ -1,20 +1,14 @@
 package com.hfad.mentalhealth
 
-import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.menu.MenuView.ItemView
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class DoctorAdapter(private val doctorList: List<DoctorList>) :
+class DoctorAdapter(private var doctorList: List<DoctorList>) :
     RecyclerView.Adapter<DoctorAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,13 +19,13 @@ class DoctorAdapter(private val doctorList: List<DoctorList>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = doctorList[position]
-        holder.nameView.text = item.name
-        holder.specializationView.text = item.specialization
-        holder.experienceView.text = item.experience
-        holder.priceView.text = item.price
-        holder.faceDoctorView.setImageResource(item.face_doctor)
-        holder.expIconView.setImageResource(item.exp_icon)
-        holder.priceIconView.setImageResource(item.price_icon)
+            holder.nameView.text = item.name
+            holder.specializationView.text = item.specialization
+            holder.experienceView.text = item.experience
+            holder.priceView.text = item.price
+            holder.faceDoctorView.setImageResource(item.face_doctor)
+            holder.expIconView.setImageResource(item.exp_icon)
+            holder.priceIconView.setImageResource(item.price_icon)
 
 
         holder.itemView.setOnClickListener {
@@ -46,6 +40,11 @@ class DoctorAdapter(private val doctorList: List<DoctorList>) :
 
     override fun getItemCount(): Int {
         return doctorList.size
+    }
+
+    fun updateData(newList: List<DoctorList>) {
+        doctorList = newList
+        notifyDataSetChanged()
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
