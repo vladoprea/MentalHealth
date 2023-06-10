@@ -6,6 +6,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface ApiServices {
-    @GET("v1/sample-data/users")
-    suspend fun getNamesList(): Response<List<Names>>
+    @GET("v1/sample-data/users?offset=10&limit=7")
+    suspend fun getNamesList(): Response<UserData>
 }
