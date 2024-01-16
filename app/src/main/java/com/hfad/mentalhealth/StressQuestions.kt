@@ -40,32 +40,17 @@ class StressQuestions : Fragment() {
 
         questionTextView = view.findViewById(R.id.question_stress)
         choiceRadioGroup = view.findViewById(R.id.stress_radio_group)
-        val testEnd = view.findViewById<TextView>(R.id.test_end)
         val nextButton = view.findViewById<Button>(R.id.next_button)
+
 
         Singleton.clearAnswers()
         showQuestion()
 
         nextButton.setOnClickListener {
-            // Save answer to the question
-            val selectedAnswer = choiceRadioGroup.checkedRadioButtonId
-            if (selectedAnswer != -1) {
-                val answerIndex = choiceRadioGroup.indexOfChild(view.findViewById(selectedAnswer))
-                Singleton.answers[currentQuestionIndex] = answerIndex
-            }
-            // Move to the next question
-            currentQuestionIndex++
-            if (currentQuestionIndex < questions.size) {
-                showQuestion()
-            } else {
-                testEnd.visibility = View.VISIBLE
-                questionTextView.visibility = View.GONE
-                choiceRadioGroup.visibility = View.GONE
-                nextButton.visibility = View.GONE
-            }
+            handleNextButtonClick(view)
         }
         // Set up radio group change listener
-        choiceRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+        choiceRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             nextButton.isEnabled = checkedId != -1
         }
 
@@ -74,6 +59,34 @@ class StressQuestions : Fragment() {
 
         return view
     }
+
+    private fun handleNextButtonClick(view:View) {
+        // Save answer to the question
+        val selectedAnswer = choiceRadioGroup.checkedRadioButtonId
+        if (selectedAnswer != -1) {
+            val answerIndex = choiceRadioGroup.indexOfChild(view.findViewById(selectedAnswer))
+            Singleton.answers[currentQuestionIndex] = answerIndex
+        }
+        // Move to the next question
+        currentQuestionIndex++
+        if (currentQuestionIndex < questions.size) {
+            showQuestion()
+        } else {
+            showTestEnd(view)
+        }
+    }
+
+    private fun showTestEnd(view: View) {
+
+        val testEnd = view.findViewById<TextView>(R.id.test_end)
+        val nextButton = view.findViewById<Button>(R.id.next_button)
+
+        testEnd.visibility = View.VISIBLE
+        questionTextView.visibility = View.GONE
+        choiceRadioGroup.visibility = View.GONE
+        nextButton.visibility = View.GONE
+    }
+
 
     private fun showQuestion() {
         val question = questions[currentQuestionIndex]
