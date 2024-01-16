@@ -1,28 +1,30 @@
 package com.hfad.mentalhealth
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.navigation.findNavController
+import com.hfad.mentalhealth.databinding.FragmentAnxietyTestBinding
 
 class StressTest : Fragment() {
 
-    @SuppressLint("MissingInflatedId")
+    private lateinit var binding: FragmentAnxietyTestBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_stress_test, container, false)
+    ): View {
+        /* Inflate the layout for this fragment */
+        binding = FragmentAnxietyTestBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        val startTest = view.findViewById<Button>(R.id.start_test)
-        startTest.setOnClickListener() {
+        val startTestButton = binding.startTest
+        startTestButton.setOnClickListener {
             view.findNavController().navigate(R.id.action_stressTest_to_stressQuestions)
         }
+
         return view
     }
 }
