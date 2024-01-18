@@ -18,7 +18,6 @@ class ConnectFragment : Fragment() {
     private lateinit var adapter: DoctorAdapter
     private lateinit var namesViewModel: NamesViewModel
 
-
     override fun onCreateView(
 
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +29,6 @@ class ConnectFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this.context)
@@ -44,8 +42,5 @@ class ConnectFragment : Fragment() {
         }
 
         namesViewModel.getAllNames()
-
-
     }
-
 }
