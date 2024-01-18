@@ -54,9 +54,6 @@ class DepressionQuestions : Fragment() {
             nextButton.isEnabled = checkedId != -1
         }
 
-        //Disable Next Button initially
-        nextButton.isEnabled = false
-
         return view
     }
 

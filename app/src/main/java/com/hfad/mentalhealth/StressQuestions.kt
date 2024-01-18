@@ -51,10 +51,6 @@ class StressQuestions : Fragment() {
         choiceRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             nextButton.isEnabled = checkedId != -1
         }
-
-        //Disable Next Button initially
-        nextButton.isEnabled = false
-
         return view
     }
 
